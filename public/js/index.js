@@ -1,3 +1,3 @@
-import Header1 from './components/Heading/Heading.js';
-const link = new Header1('My Series', document.body, 'hey');
-link.render();
+import App from './components/App/App.js';
+const app = new App(document.body);
+app.render();
