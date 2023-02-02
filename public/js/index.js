@@ -1,3 +1,3 @@
-import Link from './components/Link/Link.js';
-const link = new Link('www.hola.es', document.body, 'hello');
+import Header1 from './components/Heading/Heading.js';
+const link = new Header1('My Series', document.body, 'hey');
 link.render();
