@@ -2,37 +2,18 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ["xo", "prettier"],
-  overrides: [
-    {
-      extends: ["xo-typescript", "prettier"],
-      files: ["*.ts", "*.tsx"],
-      rules: {
-        "@typescript-eslint/consistent-type-definitions": [
-          "error",
-          "interface",
-        ],
-        "@typescript-eslint/indent": "off",
-        "@typescript-eslint/no-empty-function": "off",
-      },
-    },
-  ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
   },
+  plugins: ["@typescript-eslint"],
+  ignorePatterns: ["**/public/**/*.js"],
   rules: {
-    "no-unused-vars": [
-      "error",
-      {
-        vars: "all",
-        args: "after-used",
-        ignoreRestSiblings: true,
-        argsIgnorePattern: /^_/.source,
-        caughtErrors: "all",
-        caughtErrorsIgnorePattern: /^_$/.source,
-      },
-    ],
+    indent: ["Error", 2],
+    "object-curly-spacing": ["Error", "always"],
   },
 };
